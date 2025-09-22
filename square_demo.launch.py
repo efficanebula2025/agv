@@ -40,16 +40,22 @@ def generate_launch_description():
         output='screen'
     )
 
-    square_path = Node(
-        package='my_agv_examples',
-        executable='square_path',
-        name='square_path',
-        output='screen',
-        parameters=[{
-            'side_length': 1.0,
-            'linear_speed': 0.2,
-            'angular_speed': 0.3
-        }]
+    #(square_path = Node(
+    #    package='my_agv_examples',
+    #    executable='square_path',
+    #    name='square_path',
+    #    output='screen',
+    #    parameters=[{
+    #        'side_length': 1.0,
+    #        'linear_speed': 0.2,
+    #        'angular_speed': 0.3
+    #    }]
+    # )
+    floor_marker_node = Node(
+        package="my_agv_examples",
+        executable="floor_marker",
+        name="floor_marker",
+        output="screen"
     )
 
     rviz2 = Node(
@@ -64,6 +70,7 @@ def generate_launch_description():
         robot_state_publisher,
         joint_state_publisher,
         fake_odometry,
-        square_path,
+    #    square_path,
+        floor_marker_node,
         rviz2
     ])
