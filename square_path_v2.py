@@ -15,7 +15,7 @@ class MecanumSteps(Node):
         #  Step-by-step sequence (students can edit here)
         # type = "forward", "backward", "left", "right", "rotate_left", "rotate_right"
         self.steps = [
-            {"type": "forward",      "distance": 2.0, "speed": 0.2},   # Step 1
+            {"type": "forward",      "distance": 1.0, "speed": 0.2},   # Step 1
             {"type": "right",        "distance": 1.0, "speed": 0.2},   # Step 2
             {"type": "backward",     "distance": 1.0, "speed": 0.2},   # Step 3
             {"type": "left",         "distance": 1.0, "speed": 0.2},   # Step 4
